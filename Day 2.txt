@@ -7,7 +7,7 @@ git remote origin (url)
 git remote -v: remote 잘 됐는지
 git push origin +master:
 +: 강제로 push하겠다
-master: b
+master: branch名
 
 제어판 - 사용자 계정 - Windows 자격 증명 관리 - 일반 자격 증명
 
@@ -60,7 +60,7 @@ git log --oneline
 
 ---
 
-git reset: 특정 commit으로 되돌리기(= ctrl g)
+git reset: 특정 commit으로 되돌리기(= ctrl g)(Ex. 덮어쓰기나 pull 잘못했을 때)
 
 git reset --hard 해시값
 

@@ -1,0 +1,134 @@
+[파이썬 트랙 특화 수업 Day 1]
+
+* 강사님 수업의 목표: 능숙도(빠르고 간편하게) 올리는 것
+===
+
+Markdown aka md 배우는 이유
+: github에 프로젝트 올릴 때 README.md 파일에 활용
+
+ctrl b 사이드바 열고닫기
+ctrl ` 터미널 열고닫기
+'터미널에 touch' or 'new file 생성' -> new file 생성
+ctrl , Settings - Mouse Wheel Zoom 체크 - ctrl 확대 축소 가능
+ctrl c 실행 취소
+
+ordered list: 순서가 있는 리스트
+
+[x]: 체크ed
+[ ]: un체크ed
+
+코드 블럭 - 백틱 3번: 언어 지정(언어마다 색 다름)
+```python
+
+print('hello world')
+
+```
+---
+md 공식 문서, 가이드 문서가 기준
+Markdown Guide 활용하세요(mm)
+
+GUI, CLI
+I: Interface: 대상을 제어하는 수단(리모컨)
+
+GUI <-> TUI(Text ~, 잘 안 씀, = CLI: Command Line Interface)
+
+===
+
+Window OS의 Interface
+GUI = "Windows Shell"
+CLI = "Power shell", "명령 프롬프트(cmd)"
+
+Linux OS의 Interface
+GUI: "GNOME"(그놈)
+CLI: "Bash"
+
+Bash를 쓰는 이유
+: cmd, 파워쉘에는 없는 장점: 편하다(Tab키 누르면 자동완성)
+
+Git을 다룰 때 Interface
+GUI: "소스트리(많이 씀)", "Github Desktop"
+CLI: git bash(엄청 많이 쓸 것)
+
+git 쓸 때 GUI로 다뤄야 할까? CLI로 다뤄야 할까?
+git: 로컬 저장소(내 컴퓨터 내에) / github: 원격 저장소(온라인) / gitlab은 본인만 다운받을 수 있다는 github과의 차이 有
+GUI 장점: 보기 편하다, 친숙하다 / 복잡한 분석(그래프 등)을 보기 좋게
+CLI 장점: 빠르다(Commit 명령어 2~3초면 끝) / 20년 전에 배웠으면 현재도 쓰고 있고 미래에도 쓸 예정(변함 없다)
+
+결론 > 둘 다 써야 하지만 대부분 CLI 쓸 것(빠르기 때문)
+
+===
+
+IDE >
+
+VScode: 엄밀히는 IDE 아님
+ㄴ 텍스트 에디터: 여기에 익스텐션 추가해서 마치 IDE처럼 사용
+
+Python IDE - PyCharm, 쥬피터 노트북
+C# IDE: Visual Studio
+Java IDE: IntelliJ[인텔리제이]
+
+===
+
+MINGW64: Minimal GNU for Windows[민지 더블유]
+bash는 Linux에서 쓰는 것
+윈도우에서 Linux에 쓰이는 툴들을 사용할 수 있게 가볍게 만든 프로젝트
+
+리눅스는 항상 HOME 디렉토리: ~
+ ~/Desktop/practice
+
+cd ~: 홈 디렉토리로 감
+cd -: 뒤로 가기
+cd ..: 상위 디렉토리
+
+명령어 >
+touch: 파일 생성
+touch a.txt: a.txt 라는 파일 생성
+
+mkdir: 폴더(디렉토리) 생성
+
+start: 파일 열기
+
+rm: 삭제
+
+cp: 복사
+cp a.txt a2.txt
+(cp 원본파일 복사본파일)
+폴더는 cp -r
+
+-r: ?
+
+===
+
+절대경로 > ~/Desktop/practice
+상대경로 > ./practice2 | ../practice/practice3
+
+===
+
+git: 분산 버전 관리 시스템
+ㄴ Working Directory (git add .) Staging Area (git commit) Repository
+
+git (-push->) github
+git (<-pull(download)-) github
+
+master(디폴트 브랜치名)
+
+로컬저장소의 브랜치명과 깃헙의 브랜치명이 같아야
+
+* 깃헙 가입
+
+init .git: .git 생성
+practice - 보기 - 숨긴 항목 on - .git 폴더 나타남
+.git 폴더 ls 해도 안 나타남
+rm -rf .git: .git 삭제
+git add .: staging area에 전체 업로드
+git status: staging area에 뭐 있는지(staging area에 add됐는지 확인)
+git commit -m(message) "(메시지)": repository에 올리기
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+git log: repository에 커밋되었는지 확인
+
+* 웬만하면 VScode(숨긴 항목 이슈) 말고 GIT bash로 하세요
+
+* 레포지토리에 있는 게 push됨

@@ -1,0 +1,29 @@
+[명령어]
+git remote: repository와 github 연결
+붙여넣기: shift + insert
+origin: 별칭
+git remote origin (url)
+git remote -v: remote 잘 됐는지
+git push origin +master:
++: 강제로 push하겠다
+master: b
+
+제어판 - 사용자 계정 - Windows 자격 증명 관리 - 일반 자격 증명
+
+* pull과 clone의 차이
+새로운 환경에서 처음 다운로드 - clone
+ㄴ git clone (url)
+ㄴ 바탕화면 - git bash 열기 (* git init 지양, 찾기 어려움) - 경로 잘 설정돼있나 확인 - git clone (url)
+push나 clone을 전에 진행한 후에 다운로드 - pull
+ㄴ push나 clone 이력 있기 때문에 url 입력 불필요
+ㄴ git pull origin +master(변경사항 없으면 pull 안 됨)
+
+git remote rm orign
+git remote -v
+
+- VScode - .gitignore 파일 생성 - (파일명) - ctrl s
+git ignore는 VScode 쓰는 게 좋음(왜?)
+git ignore는 올리지 말아야 할 걸 올리지 않기 위해 사용
+(용량이 크거나 보안상 문제가 있거나 청구결제 관련 api_key 같은 파일을 add하지 않기 위해)
+나중에 파일에 수십 개 되면 / 파일 하나하나 일일이 add하는 게 아니라 add . 으로 한꺼번에 올림
+애초에 git ignore에서 작업하면 working directory에서 staging area로 add되지 않음

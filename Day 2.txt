@@ -1,5 +1,6 @@
 [명령어]
 git remote: repository와 github 연결
+복사: ctrl shift c
 붙여넣기: shift + insert
 origin: 별칭
 git remote origin (url)
@@ -27,3 +28,54 @@ git ignore는 올리지 말아야 할 걸 올리지 않기 위해 사용
 (용량이 크거나 보안상 문제가 있거나 청구결제 관련 api_key 같은 파일을 add하지 않기 위해)
 나중에 파일에 수십 개 되면 / 파일 하나하나 일일이 add하는 게 아니라 add . 으로 한꺼번에 올림
 애초에 git ignore에서 작업하면 working directory에서 staging area로 add되지 않음
+
+===
+[git 심화]
+
+vim에서 메시지, 날짜, 파일 등 수정 >
+1. git commit 메시지 수정하기
+git commit 완료
+git commit --amend
+vim
+esc : q ! (저장하지 않고 강제종료)
+esc : w q ! (강제 저장 후 종료)
+!: 강제
+ㄴ commit 후 amend - "새로운 commit 생성"
+
+2. commit을 새로 생성하지 않고 "(여태껏 한 commit) 전체 수정"
+add와 commit 사이에 amend
+
+---
+
+git revert: 특정 commit을 없었던 일로 만들기
+
+git log --oneline
+-> 해시값(: 앞에 나오는 노란색 숫자, 알파벳 조합) 확인
+
+git revert 해시값
+vim
+종료
+git log --oneline
+-> 첫 줄에 'Revert "(revert한 파일명)' 뜸
+
+---
+
+git reset: 특정 commit으로 되돌리기(= ctrl g)
+
+git reset --hard 해시값
+
+git reflog[리프로그]: 모든 과거 commit 볼 수 있음
+git reset --hard (돌아가고 싶은 해시값)
+(*** -> commit 메시지 잘 작성해야)
+확인: git log --oneline
+
+---
+(실수로 .gitignore을 안 해서) Staging area에 올라간 걸 Working directory로 되돌리기 = git add 취소하기
+
+1. 이전에 했던 commit이 없는 경우
+git rm --cached[캐치드] (파일명)
+확인: git status
+
+2. 이전에 했던 commit이 있는 경우(해당 파일 아니라도 같은 폴더 안에 다른 파일 commit했다면 ㅇㅇ)
+git restore --staged (파일명)
+확인: git status

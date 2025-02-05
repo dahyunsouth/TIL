@@ -1,0 +1,69 @@
+for(2회):
+	print(1)
+	print(2)
+	print(3)
+
+# 줄바꿈 없다면 출력 결과
+123123
+
+---
+
+for(2회):
+	print(1)
+	for(3회):
+		print('a')
+		print('b')
+	print(2)
+	print(3)
+
+# 줄바꿈 없다면 출력 결과
+# 나
+1a1b231a1b23
+# 강사님
+1 ababab 23 1 ababab 23
+
+---
+
+for(3회):
+	print(1)
+	print(2)
+print(3)
+
+for(2회):
+	for(2회):
+		print(1)
+	print(2)
+
+# 줄바꿈 없다면 출력 결과
+# 나
+11 2 11 2
+# 강사님
+121212 3 112 112
+
+---
+
+for(3회):
+	print('a')
+	print('b')
+
+	for(4회):
+		print('c')
+	for(2회):
+		print(1)
+		print(2)
+	print(3)
+print(4)
+
+# 줄바꿈 없다면 출력 결과
+# 나
+ab 
+# 강사님
+((ab cccc 1212 3) * 3) 4
+
+
+
+
+
+
+
+
